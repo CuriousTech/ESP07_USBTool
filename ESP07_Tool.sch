@@ -5503,6 +5503,67 @@ http://dangerousprototypes.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="CuriousTech">
+<description>CuriousTech custom misc parts</description>
+<packages>
+<package name="SMD-PAD3">
+<description>SMD-PAD 0.15 x 0.0176</description>
+<smd name="P$1" x="0" y="0" dx="3.81" dy="1.9304" layer="1"/>
+</package>
+<package name="SMD-PAD1">
+<description>SMD pad 0.2x0.1</description>
+<smd name="&gt;NAME" x="0" y="0" dx="2.1844" dy="1.0668" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SMD-PAD3">
+<description>SMD-PAD small</description>
+<pin name="P$1" x="-5.08" y="0" length="middle"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SMD-PAD1">
+<description>SMD solder pad small</description>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="0" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SMD-PAD-SM">
+<description>SMD-PAD</description>
+<gates>
+<gate name="G$1" symbol="SMD-PAD3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMD-PAD3">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD-PAD1">
+<description>SMD-PAD small</description>
+<gates>
+<gate name="G$1" symbol="SMD-PAD1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMD-PAD1">
+<connects>
+<connect gate="G$1" pin="P$1" pad="&gt;NAME"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 <library name="ESP-07_12">
 <packages>
 <package name="ESP-07/12">
@@ -5510,11 +5571,10 @@ http://dangerousprototypes.com</description>
 <wire x1="0" y1="22" x2="16" y2="22" width="0.127" layer="21"/>
 <wire x1="16" y1="22" x2="16" y2="0" width="0.127" layer="21"/>
 <wire x1="16" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="2" y1="22" x2="16" y2="22" width="0.127" layer="39"/>
+<wire x1="0" y1="22" x2="16" y2="22" width="0.127" layer="39"/>
 <wire x1="16" y1="22" x2="16" y2="18" width="0.127" layer="39"/>
 <wire x1="16" y1="18" x2="0" y2="18" width="0.127" layer="39"/>
 <wire x1="0" y1="18" x2="0" y2="22" width="0.127" layer="39"/>
-<wire x1="0" y1="22" x2="2" y2="22" width="0.127" layer="39"/>
 <wire x1="0" y1="22" x2="16" y2="22" width="0.127" layer="41"/>
 <wire x1="16" y1="22" x2="16" y2="18" width="0.127" layer="41"/>
 <wire x1="16" y1="18" x2="0" y2="18" width="0.127" layer="41"/>
@@ -5523,22 +5583,22 @@ http://dangerousprototypes.com</description>
 <wire x1="16" y1="22" x2="16" y2="18" width="0.127" layer="2"/>
 <wire x1="16" y1="18" x2="0" y2="18" width="0.127" layer="2"/>
 <wire x1="0" y1="18" x2="0" y2="22" width="0.127" layer="2"/>
-<smd name="TXD" x="17" y="16" dx="2.54" dy="1.27" layer="1"/>
-<smd name="RXD" x="17" y="14" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO4" x="17" y="12" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO5" x="17" y="10" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO0" x="17" y="8" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO2" x="17" y="6" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO15" x="17" y="4" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GND" x="17" y="2" dx="2.54" dy="1.27" layer="1"/>
-<smd name="VCC" x="-1" y="2" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO13" x="-1" y="4" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO12" x="-1" y="6" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO14" x="-1" y="8" dx="2.54" dy="1.27" layer="1"/>
-<smd name="GPIO16" x="-1" y="10" dx="2.54" dy="1.27" layer="1"/>
-<smd name="CH_PD" x="-1" y="12" dx="2.54" dy="1.27" layer="1"/>
-<smd name="ADC" x="-1" y="14" dx="2.54" dy="1.27" layer="1"/>
-<smd name="REST" x="-1" y="16" dx="2.54" dy="1.27" layer="1"/>
+<smd name="TXD" x="16" y="16" dx="2.54" dy="1.27" layer="1"/>
+<smd name="RXD" x="16" y="14" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO4" x="16" y="12" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO5" x="16" y="10" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO0" x="16" y="8" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO2" x="16" y="6" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO15" x="16" y="4" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GND" x="16" y="2" dx="2.54" dy="1.27" layer="1"/>
+<smd name="VCC" x="0.1" y="2" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO13" x="0.1" y="4" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO12" x="0.1" y="6" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO14" x="0.1" y="8" dx="2.54" dy="1.27" layer="1"/>
+<smd name="GPIO16" x="0.1" y="10" dx="2.54" dy="1.27" layer="1"/>
+<smd name="CH_PD" x="0.1" y="12" dx="2.54" dy="1.27" layer="1"/>
+<smd name="ADC" x="0.1" y="14" dx="2.54" dy="1.27" layer="1"/>
+<smd name="REST" x="0.1" y="16" dx="2.54" dy="1.27" layer="1"/>
 <text x="6" y="19" size="1.27" layer="29">ESP-07/12</text>
 <rectangle x1="0" y1="18" x2="16" y2="22" layer="29"/>
 </package>
@@ -5609,67 +5669,6 @@ jonnyradu@gmail.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="CuriousTech">
-<description>CuriousTech custom misc parts</description>
-<packages>
-<package name="SMD-PAD3">
-<description>SMD-PAD 0.15 x 0.0176</description>
-<smd name="P$1" x="0" y="0" dx="3.81" dy="1.9304" layer="1"/>
-</package>
-<package name="SMD-PAD1">
-<description>SMD pad 0.2x0.1</description>
-<smd name="&gt;NAME" x="0" y="0" dx="2.1844" dy="1.0668" layer="1"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SMD-PAD3">
-<description>SMD-PAD small</description>
-<pin name="P$1" x="-5.08" y="0" length="middle"/>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-</symbol>
-<symbol name="SMD-PAD1">
-<description>SMD solder pad small</description>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<pin name="P$1" x="-5.08" y="0" length="middle"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SMD-PAD-SM">
-<description>SMD-PAD</description>
-<gates>
-<gate name="G$1" symbol="SMD-PAD3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SMD-PAD3">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SMD-PAD1">
-<description>SMD-PAD small</description>
-<gates>
-<gate name="G$1" symbol="SMD-PAD1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SMD-PAD1">
-<connects>
-<connect gate="G$1" pin="P$1" pad="&gt;NAME"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5722,13 +5721,13 @@ jonnyradu@gmail.com</description>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="330"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="U$1" library="ESP-07_12" deviceset="ESP-07/12" device=""/>
 <part name="U$2" library="CuriousTech" deviceset="SMD-PAD-SM" device=""/>
 <part name="U$3" library="CuriousTech" deviceset="SMD-PAD-SM" device=""/>
 <part name="U$4" library="CuriousTech" deviceset="SMD-PAD1" device=""/>
 <part name="U$5" library="CuriousTech" deviceset="SMD-PAD1" device=""/>
 <part name="U$6" library="CuriousTech" deviceset="SMD-PAD1" device=""/>
 <part name="U$7" library="CuriousTech" deviceset="SMD-PAD1" device=""/>
+<part name="U$1" library="ESP-07_12" deviceset="ESP-07/12" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5777,13 +5776,13 @@ jonnyradu@gmail.com</description>
 <instance part="GND10" gate="1" x="101.6" y="63.5"/>
 <instance part="R8" gate="G$1" x="101.6" y="83.82" rot="R90"/>
 <instance part="GND11" gate="1" x="175.26" y="2.54"/>
-<instance part="U$1" gate="G$1" x="187.96" y="76.2" rot="MR0"/>
 <instance part="U$2" gate="G$1" x="71.12" y="78.74"/>
 <instance part="U$3" gate="G$1" x="71.12" y="93.98"/>
 <instance part="U$4" gate="G$1" x="165.1" y="33.02" rot="R180"/>
 <instance part="U$5" gate="G$1" x="165.1" y="25.4" rot="R180"/>
 <instance part="U$6" gate="G$1" x="165.1" y="17.78" rot="R180"/>
 <instance part="U$7" gate="G$1" x="165.1" y="10.16" rot="R180"/>
+<instance part="U$1" gate="G$1" x="187.96" y="76.2" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -5882,8 +5881,8 @@ jonnyradu@gmail.com</description>
 <wire x1="132.08" y1="137.16" x2="132.08" y2="83.82" width="0.1524" layer="91"/>
 <junction x="124.46" y="137.16"/>
 <junction x="132.08" y="137.16"/>
-<pinref part="U$1" gate="G$1" pin="P$9"/>
 <wire x1="132.08" y1="83.82" x2="147.32" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$9"/>
 </segment>
 <segment>
 <pinref part="3V3R" gate="G$1" pin="OUT"/>
@@ -5960,8 +5959,8 @@ jonnyradu@gmail.com</description>
 <segment>
 <wire x1="213.36" y1="83.82" x2="213.36" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="P$8"/>
 <wire x1="193.04" y1="83.82" x2="213.36" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$8"/>
 </segment>
 <segment>
 <pinref part="USB" gate="G$1" pin="GND"/>
@@ -6074,11 +6073,9 @@ jonnyradu@gmail.com</description>
 </net>
 <net name="TXD" class="0">
 <segment>
-<wire x1="203.2" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
 <label x="208.28" y="119.38" size="1.778" layer="95" rot="MR180" xref="yes"/>
+<wire x1="193.04" y1="119.38" x2="208.28" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P$1"/>
-<wire x1="205.74" y1="119.38" x2="208.28" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="119.38" x2="203.2" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="|" gate="IC" pin="RXD"/>
@@ -6094,8 +6091,8 @@ jonnyradu@gmail.com</description>
 <net name="RXD" class="0">
 <segment>
 <label x="208.28" y="114.3" size="1.778" layer="95" rot="MR180" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
 <wire x1="193.04" y1="114.3" x2="208.28" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="|" gate="IC" pin="TXD"/>
