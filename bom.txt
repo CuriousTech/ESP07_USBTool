@@ -1,4 +1,8 @@
-3V3R    MCP1824ST-3302E/DB (300mA) or TC1262-3.3VDBTR (500mA)
+3V3R    MCP1824ST-3302E/DB (6V 300mA 0.3Vdo)
+        TC1262-3.3VDBTR (6V 500mA 0.3Vdo)
+        MCP1755T-3302E/DC (16V 300mA 0.5Vdo)
+        MIC2920A-3.3WS TR (26V 400mA 0.75Vdo) Change C1 to 10uF.
+
 IC1     FT230X-SSOP16
 R1,R2   27 0805
 R3      10K 0805  (reset pullup, don't use with deepSleep)
@@ -14,4 +18,4 @@ USB f   10118193-0001LF
 LEDs    4x 0805 any color
 JP1,JP2, top serial BO  breakable header 18 pins 0.1" + 1 jumper
 ESP-07  Anywhere
-P50-E2 0.68mm pogo pins (20) (eBay)
+P50-E2  0.68mm pogo pins (20) (eBay)
